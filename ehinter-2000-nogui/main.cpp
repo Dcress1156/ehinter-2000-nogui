@@ -74,10 +74,27 @@ std::string getEmail()
 }
 
 
+
+
 // entry point :o
 int main()
 {
-	std::string email_hint{ hideEmail(getEmail()) };
-	setClipboard(email_hint.c_str());
-	std::cout << getClipboard() << " Has been copied to the clipboard!" << '\n';
+	std::cout << "+-----------------------------+" << '\n';
+	std::cout << "| Welcome to the Ehinter 2000!|" << '\n';
+	std::cout << "+-----------------------------+" << '\n';
+
+
+	do {
+		std::string email_hint{ hideEmail(getEmail()) };
+
+		setClipboard(email_hint.c_str());
+
+		std::cout << getClipboard() << " Has been copied to the clipboard!" << '\n';
+
+		system("pause");
+		system("cls");
+
+	} while (true);
+
+	return 0;
 }
